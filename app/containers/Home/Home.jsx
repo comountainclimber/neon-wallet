@@ -26,13 +26,6 @@ const Home = () => (
           placeholder="Password"
           additionalStyles={{ width: "75%", margin: 10 }}
         />
-        <RedesignedButton dark icon={login} text="Login" />
-        <RedesignedButton light text="New Waller" />
-        <RedesignedButton light text="Wallet Manager" />
-        <div />
-        <img className={styles.foo} src={login} />
-
-        <div />
       </div>
     </div>
   </div>
