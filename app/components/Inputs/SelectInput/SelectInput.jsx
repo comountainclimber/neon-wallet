@@ -3,6 +3,7 @@ import React from 'react'
 import Highlighter from 'react-highlight-words'
 import classNames from 'classnames'
 import { noop, omit, trim, includes, toLower } from 'lodash-es'
+import uniqueKey from '../../../util/uniqueKey'
 
 import TextInput from '../TextInput'
 import Dropdown from './Dropdown'
@@ -81,7 +82,6 @@ export default class SelectInput extends React.Component<Props, State> {
     )
 
     const { error, textInputContainerClassName } = this.props
-
     const className = classNames(styles.selectInput, this.props.className)
 
     return (
@@ -141,7 +141,7 @@ export default class SelectInput extends React.Component<Props, State> {
     return (
       <div
         className={styles.dropdownItem}
-        key={value}
+        key={uniqueKey()}
         aria-label={value}
         onClick={onSelect}
       >
